@@ -1,0 +1,6 @@
+# ignore Mac system files, ide
+.idea/
+.DS_store
+# ignore dataset files
+/data/train
+uw-madison-gi-tract-image-segmentation.zip
