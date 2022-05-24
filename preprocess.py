@@ -36,6 +36,7 @@ class Dataset(Dataset):
         img = img.astype('float32')
 
         mask = np.asarray(mask, dtype="float32")
+        mask = cv2.resize(mask, (256,256), interpolation=cv2.INTER_AREA)
 
         img /= 255
         img = img.transpose(2, 0, 1)
