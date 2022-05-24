@@ -3,4 +3,5 @@
 .DS_store
 # ignore dataset files
 /data/train
+/data/preprocessed_train.csv
 uw-madison-gi-tract-image-segmentation.zip
