@@ -41,10 +41,9 @@ class Dataset(Dataset):
         img /= 255
         img = img.transpose(2, 0, 1)
 
-        mask /= 255
-
         img = torch.tensor(img).to(self.device)
         mask = torch.tensor(mask).to(self.device)
+        mask = torch.unsqueeze(mask, 0)
         return img, mask
 
 def rle2mask(mask_rle: str, shape: np.ndarray, label=1):
